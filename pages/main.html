@@ -5,42 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jieun's website</title>
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   </head>
 
   <body>
     <header>
       <div class="logo">
         <a href="#"><img src="../image/Jieun.png" alt="logo" /></a>
-        <ul class="nav">
-          <li><a href="#">Work</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">방명록</a></li>
-          <li>
-            <a href="#"
-              ><img src="../image/contact_btn.png" alt="contact_btn"
-            /></a>
-          </li>
-        </ul>
       </div>
+      <ul class="nav">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">방명록</a></li>
+        <li>
+          <a href="#"
+            ><img src="../image/contact_btn.png" alt="contact_btn"
+          /></a>
+        </li>
+      </ul>
     </header>
 
     <section class="main_intro">
       <img src="../image/main_jieun_pic.png" alt="main_jieun_pic" />
-      <span>UXUI designer</span>
+      <h4>UXUI designer</h4>
       <p>
-        <span>사용자 경험</span>을 중요시하는 디자이너
-        <span>정지은</span> 입니다.
+        <span>사용자 경험</span>을<br />
+        중요시하는<br />
+        디자이너 <span>정지은</span> 입니다.
       </p>
     </section>
 
-    <img src="../image/flower.png" alt="flower" class="flower" />
-    <img src="../image/brown.png" alt="brown" class="brown" />
-    <img src="../image/yellow.png" alt="brown" class="yellow" />
-    <img src="../image/red.png" alt="red" class="red" />
-    <img
-      src="../image/butterfly_yellow.png"
-      alt="butterfly_yellow"
-      class="butterfly"
-    />
+    <div class="f_wrap">
+      <div class="flower_section">
+        <img src="../image/flower.png" alt="flower" class="main_flower" />
+        <div class="color">
+          <img src="../image/brown.png" alt="brown" class="brown" />
+          <img src="../image/yellow.png" alt="brown" class="yellow" />
+          <img src="../image/red.png" alt="red" class="red" />
+        </div>
+      </div>
+      <!-- <img
+        src="../image/butterfly_left.png"
+        alt="butterfly_left"
+        class="butterfly"
+      />
+      <img
+        src="../image/butterfly_right.png"
+        alt="butterfly_right"
+        class="butterfly_right"
+      /> -->
+      <div class="lights">
+        <div class="light_01"><img src="../image/light.png" alt="light" /></div>
+        <div class="light_02"><img src="../image/light.png" alt="light" /></div>
+        <div class="light_03"><img src="../image/light.png" alt="light" /></div>
+      </div>
+    </div>
   </body>
 </html>

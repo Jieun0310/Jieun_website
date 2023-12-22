@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +13,168 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 60px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.main_intro {
+  margin-top: 105px;
+  margin-left: 150px;
+}
+
+.main_intro h4 {
+  position: relative;
+  font-weight: 400;
+  color: #606060;
+  margin-top: 20px;
+  opacity: 0;
+  animation: ani_bottom_top 1s 2s forwards;
+}
+
+@keyframes ani_bottom_top {
+  0% {
+    top: 40px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.main_intro p {
+  font-size: 40px;
+  width: 438px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.main_intro p span {
+  color: #fc5b5b;
+}
+
+.f_wrap {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+}
+
+.flower_section {
+  display: block;
+  position: relative;
+}
+
+.main_flower {
+  position: relative;
+}
+
+.main_flower {
+  /* animation-delay: 0;
+  animation-name: slideInUp;
+  animation-duration: 3s;
+  animation-fill-mode: both; */
+  animation: 3s slideInUp 0s both;
+}
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.color .brown {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -100;
+}
+
+.color .yellow {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  z-index: -100;
+}
+
+.color .red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.butterfly {
+  position: absolute;
+  top: 18%;
+  left: -20%;
+}
+.butterfly_right {
+  position: absolute;
+  top: 0;
+  left: 80%;
+}
+
+.light_01 {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  opacity: 0;
+  animation: 2s flash 6s infinite;
+}
+
+.light_02 {
+  position: absolute;
+  top: -10%;
+  left: 40%;
+  opacity: 0;
+  animation: 3s flash 8s infinite;
+}
+
+.light_03 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  opacity: 0;
+  animation: 1.8s flash 6s infinite;
+}
+
+@keyframes flash {
+  30%,
+  50%,
+  to {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
 }
