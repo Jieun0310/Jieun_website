@@ -32,9 +32,16 @@ header {
   gap: 40px;
 }
 
+.main{
+  position: relative;
+  margin-top: 60px; 
+  height: 500px;
+  overflow: hidden;
+  
+}
+
 .main_intro {
-  margin-top: 105px;
-  margin-left: 150px;
+  margin-left: 180px;
 }
 
 .main_intro h4 {
@@ -43,7 +50,7 @@ header {
   color: #606060;
   margin-top: 20px;
   opacity: 0;
-  animation: ani_bottom_top 1s 2s forwards;
+  animation: 2s ani_bottom_top forwards;
 }
 
 @keyframes ani_bottom_top {
@@ -58,23 +65,27 @@ header {
 }
 
 .main_intro p {
+  position: relative;
   font-size: 40px;
   width: 438px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in both;
-  animation-delay: 3s;
+  animation: mymove 3s forwards;
+  animation-timing-function: ease-in;
+  transition: 0.2s;
 }
 
-@keyframes fadeIn {
+@keyframes mymove  {
   from {
     opacity: 0;
-    transform: translate3d(0, -30%, 0);
+    top: -10px;
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    top: 0px;
   }
 }
+
+
+
 
 .main_intro p span {
   color: #fc5b5b;
@@ -82,33 +93,32 @@ header {
 
 .f_wrap {
   position: absolute;
-  top: 30%;
+  top: 8%;
   left: 55%;
 }
 
 .flower_section {
   display: block;
-  position: relative;
+ 
 }
 
 .main_flower {
   position: relative;
+  display: block; 
+  object-fit: contain;
+  animation: 2s slideInUp 2s both;
+  width: 420px;
+  height: 460px;
 }
 
-.main_flower {
-  /* animation-delay: 0;
-  animation-name: slideInUp;
-  animation-duration: 3s;
-  animation-fill-mode: both; */
-  animation: 3s slideInUp 0s both;
-}
 @keyframes slideInUp {
   0% {
-    transform: translateY(100%);
-    visibility: visible;
+    bottom: 20;
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    bottom: 0px;
+    opacity: 1;
   }
 }
 
@@ -116,40 +126,96 @@ header {
   position: absolute;
   top: 50%;
   left: 0;
+  width: 180px;
+  height: 180px;
   z-index: -100;
+  z-index: -100;
+  animation: 40s fadeIn 1s backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
 }
 
 .color .yellow {
   position: absolute;
   top: 30%;
   right: 0;
+  width: 160px;
+  height: 160px;
   z-index: -100;
+  z-index: -100;
+  animation: 20s fadeIn 1s backwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
 
 .color .red {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 5%;
+  left: 15%;
+  width: 140px;
+  height: 140px;
   z-index: -100;
+  animation: 10s fadeIn 1s backwards;
 }
 
-.butterfly {
-  position: absolute;
-  top: 18%;
-  left: -20%;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
 }
+to {
+    opacity: 1;
+}
+}
+
+.butterfly-container {
+  position: relative;
+  width: 0%;
+}
+
+.butterfly_container{
+  display: none;
+}
+
 .butterfly_right {
   position: absolute;
   top: 0;
   left: 80%;
+  width: 80px;
+  height: 80px;
+  animation: motion 1s linear 0s infinite alternate;
 }
+
+.butterfly_right:hover {
+  cursor: pointer;
+  /* animation: motion 0.5s linear 0s infinite alternate; */
+}
+
+@keyframes motion {
+	0% {margin-top: 0px;} /* 처음 위치 */
+	100% {margin-top: 10px;} /* 마지막 위치 */
+  }
 
 .light_01 {
   position: absolute;
   top: 10%;
   right: 20%;
   opacity: 0;
-  animation: 2s flash 6s infinite;
+  animation: 2s flash 4s infinite;
 }
 
 .light_02 {
@@ -157,7 +223,7 @@ header {
   top: -10%;
   left: 40%;
   opacity: 0;
-  animation: 3s flash 8s infinite;
+  animation: 2.2s flash 6s infinite;
 }
 
 .light_03 {
@@ -165,7 +231,7 @@ header {
   top: 30%;
   left: 10%;
   opacity: 0;
-  animation: 1.8s flash 6s infinite;
+  animation: 1.2s flash 4s infinite;
 }
 
 @keyframes flash {
@@ -177,4 +243,73 @@ header {
   60% {
     opacity: 1;
   }
+}
+
+.location{
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.location p{
+  display: inline;
+}
+
+
+.location span{
+  color: #464646;
+  font-size: 14px;
+
+}
+
+.contacts {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 0; 
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  z-index: 100;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.contacts.active {
+  right: 0; 
+  width: 440px;
+}
+
+.contact_logo{
+  padding-top: 45px;
+  padding-left: 45px;
+}
+
+.close_btn{
+  display: none;
+}
+
+.close_btn.active{
+  display: block;
+  position: absolute;
+  top: 30px;
+  right:30px;
+  cursor: pointer;
+}
+
+
+.detail{
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 45px;
+  margin-top: 90px;
+  line-height:2;
+}
+.detail p{
+  width: 296px;
+}
+
+.contact{
+  margin: 86px 0;
 }
