@@ -68,7 +68,7 @@ header {
   position: relative;
   font-size: 40px;
   width: 438px;
-  animation: mymove 3s forwards;
+  animation: mymove 2s forwards;
   animation-timing-function: ease-in;
   transition: 0.2s;
 }
@@ -106,7 +106,7 @@ header {
   position: relative;
   display: block; 
   object-fit: contain;
-  animation: 2s slideInUp 2s both;
+  animation: 1.8s slideInUp 1s both;
   width: 420px;
   height: 460px;
 }
@@ -130,7 +130,7 @@ header {
   height: 180px;
   z-index: -100;
   z-index: -100;
-  animation: 40s fadeIn 1s backwards;
+  animation: 20s fadeIn 1s backwards;
 }
 
 @keyframes fadeIn {
@@ -150,7 +150,7 @@ to {
   height: 160px;
   z-index: -100;
   z-index: -100;
-  animation: 20s fadeIn 1s backwards;
+  animation: 15s fadeIn 1s backwards;
 }
 
 @keyframes fadeIn {
@@ -260,7 +260,6 @@ to {
 .location span{
   color: #464646;
   font-size: 14px;
-
 }
 
 .contacts {
@@ -303,7 +302,7 @@ to {
   font-size: 14px;
   font-weight: 400;
   padding-left: 45px;
-  margin-top: 90px;
+  margin-top: 60px;
   line-height:2;
 }
 .detail p{
@@ -311,5 +310,11 @@ to {
 }
 
 .contact{
-  margin: 86px 0;
+  margin: 40px 0;
+}
+
+.social ul{
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
 }
