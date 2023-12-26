@@ -19,25 +19,11 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 0 60px;
-}
-
-.nav {
-  display: flex;
-  gap: 40px;
-}
-
-.main{
+.main {
   position: relative;
-  margin-top: 60px; 
-  height: 500px;
+  margin-top: 60px;
+  height: 520px;
   overflow: hidden;
-  
 }
 
 .main_intro {
@@ -73,7 +59,7 @@ header {
   transition: 0.2s;
 }
 
-@keyframes mymove  {
+@keyframes mymove {
   from {
     opacity: 0;
     top: -10px;
@@ -83,9 +69,6 @@ header {
     top: 0px;
   }
 }
-
-
-
 
 .main_intro p span {
   color: #fc5b5b;
@@ -99,12 +82,11 @@ header {
 
 .flower_section {
   display: block;
- 
 }
 
 .main_flower {
   position: relative;
-  display: block; 
+  display: block;
   object-fit: contain;
   animation: 1.8s slideInUp 1s both;
   width: 420px;
@@ -136,10 +118,10 @@ header {
 @keyframes fadeIn {
   from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
-}
+  }
 }
 
 .color .yellow {
@@ -156,12 +138,11 @@ to {
 @keyframes fadeIn {
   from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
+  }
 }
-}
-
 
 .color .red {
   position: absolute;
@@ -176,10 +157,10 @@ to {
 @keyframes fadeIn {
   from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
-}
+  }
 }
 
 .butterfly-container {
@@ -187,7 +168,7 @@ to {
   width: 0%;
 }
 
-.butterfly_container{
+.butterfly_container {
   display: none;
 }
 
@@ -206,9 +187,13 @@ to {
 }
 
 @keyframes motion {
-	0% {margin-top: 0px;} /* 처음 위치 */
-	100% {margin-top: 10px;} /* 마지막 위치 */
-  }
+  0% {
+    margin-top: 0px;
+  } /* 처음 위치 */
+  100% {
+    margin-top: 10px;
+  } /* 마지막 위치 */
+}
 
 .light_01 {
   position: absolute;
@@ -245,28 +230,11 @@ to {
   }
 }
 
-.location{
-  display: flex;
-  gap: 10px;
-  margin-left: 40px;
-  margin-top: 20px;
-}
-
-.location p{
-  display: inline;
-}
-
-
-.location span{
-  color: #464646;
-  font-size: 14px;
-}
-
 .contacts {
   position: absolute;
   top: 0;
   right: 0px;
-  width: 0; 
+  width: 0;
   height: 100%;
   background-color: #111;
   color: #fff;
@@ -276,44 +244,43 @@ to {
 }
 
 .contacts.active {
-  right: 0; 
+  right: 0;
   width: 440px;
 }
 
-.contact_logo{
+.contact_logo {
   padding-top: 45px;
   padding-left: 45px;
 }
 
-.close_btn{
+.close_btn {
   display: none;
 }
 
-.close_btn.active{
+.close_btn.active {
   display: block;
   position: absolute;
   top: 30px;
-  right:30px;
+  right: 30px;
   cursor: pointer;
 }
 
-
-.detail{
+.detail {
   font-size: 14px;
   font-weight: 400;
   padding-left: 45px;
   margin-top: 60px;
-  line-height:2;
+  line-height: 2;
 }
-.detail p{
+.detail p {
   width: 296px;
 }
 
-.contact{
+.contact {
   margin: 40px 0;
 }
 
-.social ul{
+.social ul {
   display: flex;
   gap: 10px;
   margin-top: 5px;
