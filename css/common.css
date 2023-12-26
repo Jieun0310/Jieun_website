@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -12,7 +33,7 @@ header {
 }
 
 /* footer */
-.location {
+footer {
   display: flex;
   gap: 10px;
   height: 40px;
@@ -21,11 +42,11 @@ header {
   margin-top: 30px;
 }
 
-.location p {
+footer p {
   display: inline-block;
 }
 
-.location span {
+footer span {
   color: #464646;
   font-size: 14px;
 }
