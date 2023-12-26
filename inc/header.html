@@ -11,3 +11,14 @@
     /></a>
   </li>
 </ul>
+
+<script>
+  $(window).scroll(function () {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue > 100) {
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    }
+  });
+</script>
