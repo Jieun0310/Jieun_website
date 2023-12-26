@@ -16,8 +16,9 @@ header {
   display: flex;
   gap: 10px;
   height: 40px;
+  line-height: 40px;
   margin-left: 40px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .location p {
@@ -27,4 +28,61 @@ header {
 .location span {
   color: #464646;
   font-size: 14px;
+}
+
+/* contact */
+.contacts {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 0;
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  z-index: 100;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.contacts.active {
+  right: 0;
+  width: 440px;
+}
+
+.contact_logo {
+  padding-top: 45px;
+  padding-left: 45px;
+}
+
+.close_btn {
+  display: none;
+}
+
+.close_btn.active {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.detail {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 45px;
+  margin-top: 60px;
+  line-height: 2;
+}
+.detail p {
+  width: 296px;
+}
+
+.contact {
+  margin: 40px 0;
+}
+
+.social ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
 }

@@ -63,69 +63,15 @@
     </div>
 
     <footer class="location"></footer>
-
-    <div class="contacts">
-      <div class="contact_header">
-        <div class="contact_logo">
-          <img src="../image/Jieun_white_logo.png" alt="logo" />
-        </div>
-        <div class="close_btn">
-          <img src="../image/close_btn.png" alt="close_btn" />
-        </div>
-      </div>
-
-      <div class="detail">
-        <p>
-          더 다양한 작품을 보고싶으시거나 궁금한 점은 아래 연락처로 연락주시거나
-          SNS를 확인해보세요!
-        </p>
-        <div class="contact">
-          <h3>contact</h3>
-          <p>주소 : 부산 남구 용호로269번길 90</p>
-          <p>Phone : +82 10-8384-6560</p>
-          <p>Email : jieun.jung0310@gmail.com</p>
-        </div>
-        <div class="social">
-          <h3>Social</h3>
-          <ul>
-            <li>
-              <a href="#"
-                ><img
-                  src="../image/icon-park-outline_dribble.png"
-                  alt="outline_dribble"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="../image/mdi_instagram.png" alt="mdi_instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="../image/ri_linkedin-fill.png" alt="ri_linkedin"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div class="contacts"></div>
   </body>
-
-  <script>
-    $('.contact_btn').click(function () {
-      $('.close_btn').toggleClass('active');
-      $('.contacts').toggleClass('active');
-    });
-
-    $('.close_btn').click(function () {
-      $('.contacts').removeClass('active');
-      $('.close_btn').removeClass('active');
-    });
-  </script>
 
   <script>
     // header
     $('header').load('../inc/header.html');
+
+    // contact
+    $('.contacts').load('../inc/contact.html');
 
     // footer
     $('footer').load('../inc/footer.html');
