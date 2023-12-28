@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Show all page</title>
-    <link rel="stylesheet" href="../css/showall.css" />
+    <title>work</title>
+    <link rel="stylesheet" href="../css/work.css" />
     <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" />
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="../js/jquery.magnific-popup.js"></script>
   </head>
+
   <body>
     <header></header>
 
     <div class="contents">
-      <ul class="sorting">
-        <li><a href="#">Sort by:</a></li>
-        <li><a href="#">Show all</a></li>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">UI/UX</a></li>
-        <li><a href="#">Graphic Design</a></li>
-      </ul>
+      <div class="sorting">
+        <button data-id="all" class="active">Show all</button>
+        <button data-id="web">Web Design</button>
+        <button data-id="uiux">UI/UX</button>
+        <button data-id="graphic">Graphic Design</button>
+      </div>
 
       <ul class="list">
-        <li>
+        <li data-item="web">
           <a href="#">
             <img src="../image/work/etude.png" alt="etude" />
             <div class="title">
@@ -41,7 +43,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="web">
           <a href="#">
             <img src="../image/work/jeju.png" alt="jeju" />
             <div class="title">
@@ -59,7 +61,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="web">
           <a href="#">
             <img src="../image/work/sc_bank.png" alt="sc_bank" />
             <div class="title">
@@ -77,11 +79,11 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="uiux">
           <a href="#">
-            <img src="../image/work/10%.png" alt="10%" />
+            <img src="../image/work/tenpercent.png" alt="10%" />
             <div class="title">
-              <img src="../image/work/10% logo.png" alt="10%" />
+              <img src="../image/work/ten logo.png" alt="10%" />
               <span>텐퍼센트 커피</span>
               <div class="icons">
                 <img src="../image/work/mdi_eye.png" alt="mdi_eye" />
@@ -95,7 +97,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="uiux">
           <a href="#">
             <img src="../image/work/Frame 104.png" alt="ticket bite" />
             <div class="title">
@@ -113,7 +115,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="uiux">
           <a href="#">
             <img src="../image/work/Frame 105.png" alt="undefined" />
             <div class="title">
@@ -131,8 +133,11 @@
             </div>
           </a>
         </li>
-        <li>
-          <a href="#">
+        <li data-item="graphic">
+          <a
+            href="http://127.0.0.1:5501/pages/photoshop01.html"
+            class="simple-ajax-popup"
+          >
             <img src="../image/work/masiel.png" alt="masiel" />
             <div class="title">
               <img src="../image/work/photoshop logo.png" alt="photoshop" />
@@ -149,7 +154,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/Frame 107.png" alt="etude" />
             <div class="title">
@@ -167,7 +172,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/Frame 108.png" alt="etude" />
             <div class="title">
@@ -185,7 +190,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/summer.png" alt="summer" />
             <div class="title">
@@ -203,7 +208,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/Frame 89.png" alt="etude" />
             <div class="title">
@@ -221,7 +226,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/Frame 90.png" alt="etude" />
             <div class="title">
@@ -239,7 +244,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/travel.png" alt="travel" />
             <div class="title">
@@ -257,7 +262,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/cat.png" alt="cat" />
             <div class="title">
@@ -275,7 +280,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-item="graphic">
           <a href="#">
             <img src="../image/work/cuphead.png" alt="cuphead" />
             <div class="title">
@@ -301,6 +306,7 @@
     <div class="contacts"></div>
     <!-- <footer class="location"></footer> -->
   </body>
+
   <script>
     // header
     $('header').load('../inc/header.html');
@@ -310,5 +316,44 @@
 
     // footer
     $('footer').load('../inc/footer.html');
+  </script>
+
+  <script>
+    var list = $('.list');
+    var btn = $('#btn');
+    console.log(list);
+    list.find('li').slice(0, 6).show();
+    btn.click(function () {
+      if (list.find('li:hidden').length <= 0) {
+        alert('더 이상 작업물이 없습니다.');
+      } else {
+        list.find('li:hidden').slice(0, 6).fadeIn();
+      }
+    });
+
+    var sorting = $('.sorting button');
+    var items = $('.list li');
+
+    sorting.on('click', function (e) {
+      sorting.removeClass('active');
+      $(this).addClass('active');
+
+      var category = e.currentTarget.dataset.id;
+
+      if (category === 'all') {
+        items.show();
+      } else {
+        items.hide().filter(`[data-item = ${category}]`).show();
+        // items.hide().filter('[data-item = ' + category +']').show()
+        btn.hide();
+      }
+    });
+  </script>
+
+  <script>
+    // ajax popup
+    $('.simple-ajax-popup').magnificPopup({
+      type: 'ajax',
+    });
   </script>
 </html>

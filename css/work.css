@@ -1,0 +1,62 @@
+.sorting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  gap: 30px;
+  width: 400px;
+  padding: 20px 0;
+}
+
+.sorting button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+}
+.sorting button.active {
+  color: #fc5b5b;
+}
+
+.list {
+  width: 1260px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+}
+
+.list li {
+  display: none;
+}
+
+.title {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.icons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-left: 158px;
+}
+.icons img {
+  display: block;
+}
+
+#btn {
+  display: block;
+  border: none;
+  padding: 10px 15px;
+  margin: 40px auto;
+  cursor: pointer;
+  background-color: #111;
+  color: #fff;
+}
