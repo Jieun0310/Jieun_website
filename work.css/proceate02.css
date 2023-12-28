@@ -1,0 +1,30 @@
+.details_images {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.details_images img {
+  display: block;
+}
+
+.left {
+  width: 566px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left img:first-child {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  height: 200px;
+  margin-top: 60px;
+}
+
+.details p {
+  margin: 60px auto;
+  text-align: center;
+}
