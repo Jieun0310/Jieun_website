@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jieun's website</title>
+    <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
     <!-- jquery cdn -->
@@ -11,21 +12,7 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo">
-        <a href="#"><img src="../image/Jieun.png" alt="logo" /></a>
-      </div>
-      <ul class="nav">
-        <li><a href="#">Work</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">방명록</a></li>
-        <li>
-          <a href="#" class="contact_btn"
-            ><img src="../image/contact_btn.png" alt="contact_btn"
-          /></a>
-        </li>
-      </ul>
-    </header>
+    <header></header>
 
     <div class="main">
       <section class="main_intro">
@@ -49,12 +36,12 @@
         </div>
 
         <div class="butterfly_container">
-        <img
-          src="../image/butterfly_left.png"
-          alt="butterfly_left"
-          class="butterfly"
-        />
-      </div>
+          <img
+            src="../image/butterfly_left.png"
+            alt="butterfly_left"
+            class="butterfly"
+          />
+        </div>
 
         <img
           src="../image/butterfly_right.png"
@@ -62,105 +49,31 @@
           class="butterfly_right"
         />
         <div class="lights">
-          <div class="light_01"><img src="../image/light.png" alt="light" /></div>
-          <div class="light_02"><img src="../image/light.png" alt="light" /></div>
-          <div class="light_03"><img src="../image/light.png" alt="light" /></div>
+          <div class="light_01">
+            <img src="../image/light.png" alt="light" />
+          </div>
+          <div class="light_02">
+            <img src="../image/light.png" alt="light" />
+          </div>
+          <div class="light_03">
+            <img src="../image/light.png" alt="light" />
+          </div>
         </div>
       </div>
     </div>
 
-    <footer class="location">
-      <p><span id="city"></span></p>
-      <p><span id="country"></span></p>
-      <p><span id="time"></span></p>
-    </footer>
-
-    <div class="contacts">
-      <div class="contact_header">
-        <div class="contact_logo">
-          <img src="../image/Jieun_white_logo.png" alt="logo">
-        </div>
-        <div class="close_btn">
-          <img src="../image/close_btn.png" alt="close_btn">
-       </div>
-      </div>
-    
-
-      <div class="detail">
-        <p>더 다양한 작품을 보고싶으시거나 궁금한 점은 아래 
-          연락처로 연락주시거나 SNS를 확인해보세요!</p>
-          <div class="contact">
-          <h3>contact</h3>
-            <p>주소 : 부산 남구 용호로269번길 90</p>
-            <p>Phone :  +82 10-8384-6560</p>
-            <p>Email : jieun.jung0310@gmail.com</p>
-        </div>
-        <div class="social">
-          <h3>Social</h3>
-            <ul>
-              <li><a href="#"><img src="../image/icon-park-outline_dribble.png" alt="outline_dribble"></a></li>
-              <li><a href="#"><img src="../image/mdi_instagram.png" alt="mdi_instagram"></a></li>
-              <li><a href="#"><img src="../image/ri_linkedin-fill.png" alt="ri_linkedin"></a></li>
-            </ul>
-          </div>
-      </div>
-  </div>
-
+    <footer class="location"></footer>
+    <div class="contacts"></div>
   </body>
 
-  <script>  
-        $('.contact_btn').click(function () {
-          $('.close_btn').toggleClass('active');
-          $('.contacts').toggleClass('active');
-        });
-
-        $('.close_btn').click(function () {
-          $('.contacts').removeClass('active');
-          $('.close_btn').removeClass('active');
-        });
-  </script>
-
-
   <script>
- document.addEventListener("DOMContentLoaded", function() {
-    // 위치, 나라 정보 가져오기
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
+    // header
+    $('header').load('../inc/header.html');
 
-            // OpenCage Geocoding API를 사용하여 위치를 가져옴
-            var apiKey = '463e992eee534ec0aae39e00ac154464';
-            var apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
+    // contact
+    $('.contacts').load('../inc/contact.html');
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    var city = data.results[0].components.city;
-                    var country = data.results[0].components.country;
-
-                    document.getElementById("city").innerText = city;
-                    document.getElementById("country").innerText = country;
-                })
-                .catch(error => console.error('Error:', error));
-        });
-    } else {
-        // 위치 정보를 가져올 수 없는 경우의 처리
-        document.getElementById("city").innerText = "위치 정보를 가져올 수 없습니다.";
-    }
-
-    // 현재 시간 표시
-    setInterval(updateTime, 1000); // 1초 간격으로 시간 갱신
-
-    function updateTime() {
-        var currentTime = new Date();
-        var hours = currentTime.getHours();
-        var minutes = currentTime.getMinutes();
-        var seconds = currentTime.getSeconds();
-
-        var timeString = `${hours}:${minutes}:${seconds}`;
-        document.getElementById("time").innerText = timeString;
-    }
-});
+    // footer
+    $('footer').load('../inc/footer.html');
   </script>
 </html>

@@ -1,0 +1,48 @@
+<p><span id="city"></span></p>
+<p><span id="country"></span></p>
+<p><span id="time"></span></p>
+
+<script>
+  $(function () {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        // console.log(latitude);
+        // console.log('a');
+
+        // OpenCage Geocoding API를 사용하여 위치를 가져옴
+        var apiKey = '463e992eee534ec0aae39e00ac154464';
+        var apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
+
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            var city = data.results[0].components.city;
+            var country = data.results[0].components.country;
+
+            document.getElementById('city').innerText = city;
+            document.getElementById('country').innerText = country;
+          })
+          .catch((error) => console.error('Error:', error));
+      });
+    } else {
+      // 위치 정보를 가져올 수 없는 경우의 처리
+      document.getElementById('city').innerText =
+        '위치 정보를 가져올 수 없습니다.';
+    }
+
+    setInterval(updateTime, 1000); // 1초 간격으로 시간 갱신
+
+    function updateTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+
+      var timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('time').innerText = timeString;
+    }
+  });
+</script>

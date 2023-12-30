@@ -1,0 +1,24 @@
+<div class="logo">
+  <a href="../pages/main.html"><img src="../image/Jieun.png" alt="logo" /></a>
+</div>
+<ul class="nav">
+  <li><a href="../pages/work.html">Work</a></li>
+  <li><a href="../pages/about.html">About</a></li>
+  <li><a href="#">방명록</a></li>
+  <li>
+    <a href="#" class="contact_btn"
+      ><img src="../image/contact_btn.png" alt="contact_btn"
+    /></a>
+  </li>
+</ul>
+
+<script>
+  $(window).scroll(function () {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue > 100) {
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    }
+  });
+</script>

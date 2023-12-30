@@ -1,0 +1,12 @@
+.details_images {
+  display: flex;
+  gap: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.details p {
+  margin: 60px auto;
+  text-align: center;
+}
