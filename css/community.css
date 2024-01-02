@@ -86,6 +86,10 @@ footer {
   font-size: 14px;
 }
 
+.show {
+  display: block;
+}
+
 .id {
   display: flex;
   gap: 18px;
