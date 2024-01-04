@@ -16,7 +16,6 @@
   flex: 1;
 }
 .left p {
-  width: 300px;
   text-align: center;
 }
 
@@ -33,14 +32,14 @@
   display: flex;
   gap: 5px;
   padding: 8px 24px;
-  background-color: #ffdde1;
+  background-color: #b1d7ff;
   border-radius: 25px;
   align-items: center;
   font-size: 12px;
 }
 
 .left ul li a:hover {
-  background-color: #fcb9c0;
+  background-color: #7ebcff;
 }
 
 .left ul li a img {
@@ -323,9 +322,6 @@
 .HoverE,
 .JavascriptE {
   margin-top: 80px;
-}
-
-.another {
 }
 
 .another h2 {
