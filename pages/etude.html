@@ -43,6 +43,7 @@
           <li>
             <a
               href="https://www.figma.com/proto/scikPCuwpWxEuI5PjasB91/%EC%97%90%EB%9B%B0%EB%93%9C%ED%95%98%EC%9A%B0%EC%8A%A4?page-id=36%3A182&type=design&node-id=204-26&viewport=-37%2C140%2C0.09&t=g9czXXxW67dy6fBN-1&scaling=min-zoom&starting-point-node-id=204%3A26&mode=design"
+              target="blank"
               ><img
                 src="../image/devicon_figma.png"
                 alt="devicon_figma"
@@ -50,12 +51,14 @@
             >
           </li>
           <li>
-            <a href="https://github.com/Jieun0310/ETUDE"
-              ><img src="../image/mdi_github.png" alt="mdi_github" />Github</a
-            >
+            <a href="https://github.com/Jieun0310/ETUDE" target="blank">
+              <img src="../image/mdi_github.png" alt="mdi_github" />Github
+            </a>
           </li>
           <li>
-            <a href="http://cmkm3010.dothome.co.kr/etude/pages/main.html"
+            <a
+              href="http://cmkm3010.dothome.co.kr/etude/pages/main.html"
+              target="blank"
               ><img
                 src="../image/mdi_internet.png"
                 alt="mdi_internet"
@@ -141,7 +144,9 @@
         </div>
         <div class="bottom">
           <h2>Hover Effect</h2>
-          <p># Hover를 활용한 이미지 변경 및 확대 효과</p>
+          <p># 이미지 변경 및 확대 효과</p>
+          <p># 배경 및 글자 색상 변경 효과</p>
+          <p># 배경 투명도 변경 효과</p>
         </div>
       </div>
       <div class="card ScrollE">
@@ -152,7 +157,8 @@
         </div>
         <div class="bottom">
           <h2>Scroll Effect</h2>
-          <p># 특정 구간만 적용되는 Scroll 효과</p>
+          <p># 원하는 구간에만 적용하는 Scroll</p>
+          <p># 특정 요소 클릭 시 반응하는 Scroll</p>
         </div>
       </div>
       <div class="card MediaE">
@@ -186,22 +192,16 @@
         </div>
         <div class="bottom">
           <h2>Javascript</h2>
-          <p># Javascript를 이용한 애니메이션 효과</p>
+          <p># Scrollreveal을 이용한 애니메이션 효과</p>
+          <p># SetInterval로 시간차를 활용한 애니메이션 효과</p>
         </div>
       </div>
       <div class="card AnimateE">
-        <div class="top">
-          <div class="top_photo">
-            <img src="../image/etude/main slider1.jpg" alt="slider1" />
-            <img src="../image/etude/main slider2.jpg" alt="slider2" />
-            <img src="../image/etude/main slider3.jpg" alt="slider3" />
-            <img src="../image/etude/main slider4.jpg" alt="slider4" />
-          </div>
-        </div>
-        <div class="bottom">
-          <h2>Animate Effect</h2>
-          <p># CSS를 이용한 애니메이션 효과</p>
-        </div>
+        <h2>그 외</h2>
+        <p>#Favicon 적용하기</p>
+        <p>#동영상 삽입하기</p>
+        <p>#CSS를 활용한 애니메이션 효과</p>
+        <p>#Sticky navigation 등 다양한 display효과 적용</p>
       </div>
     </section>
 
@@ -233,13 +233,13 @@
     $('.right').slick({
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 400,
     });
 
     $('.top_photo').slick({
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1000,
       arrows: false,
     });
   </script>

@@ -208,3 +208,8 @@
     opacity: 1;
   }
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+}

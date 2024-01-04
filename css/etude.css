@@ -231,6 +231,10 @@
 
 .AnimateE {
   animation-delay: 950ms;
+  padding: 20px;
+}
+.AnimateE p {
+  padding-top: 20px;
 }
 
 .card .top {
