@@ -1,3 +1,11 @@
+.sc_right img {
+  display: block;
+  width: 490px;
+  height: 500px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
 .swiper {
   width: 360px;
   height: 480px;

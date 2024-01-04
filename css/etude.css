@@ -32,14 +32,14 @@
   display: flex;
   gap: 5px;
   padding: 8px 24px;
-  background-color: #b1d7ff;
+  background-color: #b1c3ff;
   border-radius: 25px;
   align-items: center;
   font-size: 12px;
 }
 
 .left ul li a:hover {
-  background-color: #7ebcff;
+  background-color: #9db4ff;
 }
 
 .left ul li a img {
