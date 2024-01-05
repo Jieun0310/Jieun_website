@@ -213,3 +213,32 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+.box {
+  position: absolute;
+  left: -30px;
+  top: 30%;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  offset: path(
+      'M1 2.00026C43.3333 -8.33307 144.1 61.0027 198.5 119.003C266.5 191.503 334.5 262 454.5 251.16C574.5 240.32 700.42 111.3 780.5 70.5024'
+    )
+    auto;
+  animation: moveto 5s ease-in-out forwards;
+}
+
+.box::after {
+  content: url(../image/butterfly_left.png);
+  display: block;
+}
+@keyframes moveto {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+}
