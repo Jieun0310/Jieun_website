@@ -1,0 +1,15 @@
+.details_images {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.details_images img {
+  display: block;
+}
+
+.details p {
+  margin: 0px auto;
+  text-align: center;
+}
