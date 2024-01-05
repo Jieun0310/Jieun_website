@@ -214,6 +214,7 @@ footer {
   bottom: 0;
 }
 
+/* moving butterfly */
 .box {
   position: absolute;
   left: -30px;
@@ -231,7 +232,9 @@ footer {
 .box::after {
   content: url(../image/butterfly_left.png);
   display: block;
+  animation: motion 1s linear 0s infinite alternate;
 }
+
 @keyframes moveto {
   0% {
     offset-distance: 0%;
