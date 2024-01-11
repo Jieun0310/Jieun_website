@@ -60,6 +60,13 @@ table td:last-child {
   margin-top: 40px;
 }
 
+.skill ul li img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
 .about_images {
   position: relative;
   margin-top: 160px;
