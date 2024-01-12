@@ -112,7 +112,7 @@ button {
 .bird_photo {
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 5%;
   animation: fadein 4s alternate;
 }
 
@@ -128,7 +128,7 @@ button {
 .dog_photo {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -5%;
   animation: fadein;
   animation-duration: 8s;
 }
@@ -144,8 +144,8 @@ button {
 
 .elephant_photo {
   position: absolute;
-  top: 190%;
-  right: 0%;
+  bottom: -150%;
+  right: -2%;
   object-fit: contain;
   width: 280px;
   overflow: hidden;
