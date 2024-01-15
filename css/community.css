@@ -1,0 +1,22 @@
+.books {
+  margin: 200px auto;
+  justify-content: center;
+  display: flex;
+  gap: 60px;
+}
+
+.books a {
+  position: relative;
+  background-color: #eee;
+  width: 400px;
+  height: 400px;
+}
+
+.books a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 300px;
+}
