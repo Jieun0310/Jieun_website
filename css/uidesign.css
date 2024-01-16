@@ -7,3 +7,19 @@
   width: 640px;
   padding: 20px 0;
 }
+
+.ui_images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 60px 0;
+  justify-content: center;
+}
+
+.booking.slick-initialized.slick-slider {
+  width: 1200px;
+}
+
+.triple.slick-initialized.slick-slider {
+  width: 1200px;
+}

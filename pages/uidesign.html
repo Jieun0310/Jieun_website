@@ -7,10 +7,26 @@
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/uidesign.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="../js/jquery.magnific-popup.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </head>
   <body>
     <header></header>
@@ -22,6 +38,20 @@
         또한 figma를 활용하여 figma의 컴포넌트 속성, 오토레이 아웃 등의 기능을
         파악하고 이해 할 수 있었습니다.
       </p>
+    </div>
+    <div class="ui_images">
+      <a
+        href="https://www.figma.com/file/xMb0QnTmxsQcuJIZPXmtAg/Untitled?type=design&node-id=0%3A1&mode=design&t=wYMGSMVCSTgju9mB-1"
+        >Figma</a
+      >
+      <div class="booking">
+        <img src="../image/booking1.jpg" alt="booking1" />
+        <img src="../image/booking2.jpg" alt="booking2" />
+      </div>
+      <div class="triple">
+        <img src="../image/triple1.jpg" alt="triple1" />
+        <img src="../image/triple2.jpg" alt="triple2" />
+      </div>
     </div>
     <div class="contacts"></div>
     <!-- <footer class="location"></footer> -->
@@ -35,5 +65,9 @@
 
     // footer
     $('footer').load('../inc/footer.html');
+  </script>
+  <script>
+    $('.booking').slick();
+    $('.triple').slick();
   </script>
 </html>
