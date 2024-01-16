@@ -16,22 +16,66 @@
   </head>
   <body>
     <header></header>
-    <div class="books">
-      <a href="#"
-        ><img
-          src="https://shopping-phinf.pstatic.net/main_3248641/32486415635.20230905101057.jpg?type=w300"
-          alt="ux_design01"
-      /></a>
-      <a href="#"
-        ><img
-          src="https://shopping-phinf.pstatic.net/main_3511551/35115513618.20230502162008.jpg?type=w300"
-          alt="ux_design02"
-      /></a>
-      <a href="#"
-        ><img
-          src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_3248330%2F32483306366.20230801121211.jpg&type=w216"
-          alt="ux_design03"
-      /></a>
+    <h1>디자인 관련 서적들</h1>
+    <div class="flip-cards">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://shopping-phinf.pstatic.net/main_3248641/32486415635.20230905101057.jpg?type=w300"
+              alt="ux_design01"
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              "Don't Make Me Think"은 웹 디자인 및 사용자 경험에 관한 책으로,
+              저자는 Steve Krug입니다. 이 책은 웹사이트 및 애플리케이션
+              디자이너를 대상으로 하며, 사용자 경험을 개선하고 웹사이트를 더
+              사용자 친화적으로 만드는 방법에 대해 다룹니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://shopping-phinf.pstatic.net/main_3511551/35115513618.20230502162008.jpg?type=w300"
+              alt="ux_design02"
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              저자 마에다 타카시의 성장기를 후배 디자이너들을 위해 정리한
+              책입니다. 디자인을 시작하면 초보 디자이너들이, 심지어 어느 정도
+              경력이 찬 디자이너들도 쉽게 하는 실수가 생깁니다. 그런 실수들을
+              줄이기 위한 마인드셋, 디자이너가 해야 하는 사고방식을 하나씩
+              저자의 경험과 노하우가 녹아들어 있습니다. 모든 조언 하나하나에는
+              저자가 경험한 사례들을 통해 이야기해 주기 때문에 정말 다양한
+              디자인 사례들에 대한 이야기를 접할 수 있게 됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_3248330%2F32483306366.20230801121211.jpg&type=w216"
+              alt="ux_design03"
+            />
+          </div>
+          <div class="flip-card-back">
+            <p>
+              UX 실무의 기초적이고도 중요한 개념과 전략을 적절한 일러스트와
+              예제로 설명을 해주어 UX에 관한 개념을 이해하기 쉬운 책입니다. UX는
+              다른 디자인 분야와 달리 전략과 개념이 중요한 실무에서 가장
+              중요하다. 이 책에서는 디자인 씽킹, 애자일, 스프린트, 린, 페르소나
+              등 UX의 다양한 방법론 및 전략등에 관하여 상세히 알 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contacts"></div>
     <footer></footer>
@@ -47,5 +91,13 @@
 
     // footer
     $('footer').load('../inc/footer.html');
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.flip-card').click(function () {
+        $(this).find('.flip-card-inner').toggleClass('flip');
+      });
+    });
   </script>
 </html>
