@@ -73,3 +73,9 @@
   display: block;
   margin: 20px auto;
 }
+
+.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  position: absolute;
+  top: 580px;
+  z-index: 100;
+}
