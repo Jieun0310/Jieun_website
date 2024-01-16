@@ -68,8 +68,8 @@
   display: block;
   object-fit: contain;
   animation: 1.8s slideInUp 1s both;
-  width: 440px;
-  height: 480px;
+  width: 480px;
+  height: 520px;
 }
 
 @keyframes slideInUp {
@@ -154,7 +154,7 @@
 .butterfly_right {
   position: absolute;
   top: 0;
-  left: 80%;
+  left: 90%;
   width: 80px;
   height: 80px;
   animation: motion 1s linear 0s infinite alternate;
@@ -217,7 +217,7 @@ footer {
 /* moving butterfly */
 .box {
   position: absolute;
-  left: -30px;
+  left: 10px;
   top: 30%;
   width: 60px;
   height: 60px;
