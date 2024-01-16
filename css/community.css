@@ -76,7 +76,7 @@ h1 {
 .flip-card-back {
   width: 320px;
   height: 392px;
-  background-color: antiquewhite;
+  background-color: #ffffff;
   transform: rotateY(180deg);
 }
 .flip-card-back p {

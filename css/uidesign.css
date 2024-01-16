@@ -1,0 +1,9 @@
+.ui_intro {
+  margin: 120px 100px 0 100px;
+  width: 1400px;
+}
+
+.ui_intro p {
+  width: 640px;
+  padding: 20px 0;
+}

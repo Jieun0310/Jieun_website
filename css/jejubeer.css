@@ -76,6 +76,9 @@
 
 .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
   position: absolute;
-  top: 580px;
-  z-index: 100;
+  top: 596px;
+}
+
+.swiper-pagination-progressbar-fill {
+  --swiper-theme-color: #12acff;
 }
