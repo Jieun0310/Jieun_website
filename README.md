@@ -6,14 +6,16 @@
 
 본 프로젝트는 개인 웹사이트를 제작하여 포트폴리오를 만든 것입니다. 해당 웹사이트에서는 작성자의 디자인 기술 및 능력을 확인 할 수 있는 디자인들이 녹아져 있습니다.
 
-## 🖥 프로젝트 기간
-2023.11 ~ 2024.01
+
+
+## 📆 프로젝트 기간
+2023년 11월 ~ 2024년 01월
+
 
 
 ## 📌주요 기능
 
 #### 1. HTML: 마크업을 통한 기초 문서 작성
-#### 2. CSS: 스타일링 및 디자인, 레이아웃 제어, 애니메이션 효과
 #### 3. Jquery: 다양한 애니메이션 기능
       ㆍ Slick slide
       
@@ -42,15 +44,14 @@
 
 ## 🌐사용 언어
 
-HTML
-CSS
-Jquery
-Javascript
+<br> HTML
+<br> CSS
+<br> Jquery
+<br> Javascript
 
 ## ✉️연락처
 
 정지은 - jieun.jung0310@gmail.com
 
 project link:
-
-https://github.com/Jieun0310/Jieun_website.git
+<https://github.com/Jieun0310/Jieun_website.git>
