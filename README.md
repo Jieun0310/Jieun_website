@@ -9,13 +9,13 @@ Jieun's website (17 01 2024 10_17)
     1. HTML: 마크업을 통한 기초 문서 작성
     2. CSS: 스타일링 및 디자인, 레이아웃 제어, 애니메이션 효과
     3. Jquery: 다양한 애니메이션 기능
-    Slick slide
-    Swipe_slider
-    Drawermenu
-    filter
-    Viewmore
-    header
-    magnific_popup
+    - Slick slide
+    - Swipe_slider
+    - Drawermenu
+    - filter
+    - Viewmore
+    - header
+    - magnific_popup
     4. Javascript : 다양한 애니메이션 기능
     geolocation을 이용한 현 위치 나타내기
     Counter를 이용한 갯수에 맞는 합계 금액 산출하기
