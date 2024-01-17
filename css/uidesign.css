@@ -23,3 +23,53 @@
 .triple.slick-initialized.slick-slider {
   width: 1200px;
 }
+
+.booking_wrap {
+  position: relative;
+}
+
+.booking_wrap a {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.booking_wrap a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.booking_wrap a img {
+  width: 30px;
+}
+
+.triple_wrap {
+  position: relative;
+}
+
+.triple_wrap a {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.triple_wrap a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.triple_wrap a img {
+  width: 30px;
+}
