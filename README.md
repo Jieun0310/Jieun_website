@@ -20,7 +20,8 @@ UI/UX 향상:
   - Javascript
 
 ## 연락처
-정지은 -jieun.jung0310@gmail.com
+정지은 - jieun.jung0310@gmail.com
 
-project link
+project link:
+https://github.com/Jieun0310/Jieun_website.git
 
